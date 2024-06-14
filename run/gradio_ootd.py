@@ -49,7 +49,7 @@ def process_hd(vton_img, garm_img, n_samples, n_steps, image_scale, seed):
         mask, mask_gray = get_mask_location(model_type, category_dict_utils[category], model_parse, keypoints)
         mask = mask.resize((768, 1024), Image.NEAREST)
         mask_gray = mask_gray.resize((768, 1024), Image.NEAREST)
-        
+         
         masked_vton_img = Image.composite(mask_gray, vton_img, mask)
 
         images = ootd_model_hd(
@@ -154,6 +154,11 @@ with block:
                     os.path.join(example_path, 'garment/00151_00.jpg'),
                     os.path.join(example_path, 'garment/12562_00.jpg'),
                     os.path.join(example_path, 'garment/04825_00.jpg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_1.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_2.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_3.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_4.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_5.jpeg'),
                 ])
         with gr.Column():
             result_gallery = gr.Gallery(label='Output', show_label=False, elem_id="gallery", preview=True, scale=1)   
@@ -217,6 +222,24 @@ with block:
                     os.path.join(example_path, 'garment/050181_1.jpg'),
                     os.path.join(example_path, 'garment/049805_1.jpg'),
                     os.path.join(example_path, 'garment/050105_1.jpg'),
+                    os.path.join(example_path, 'garment/italist/coat/upperbody_coat_2.jpeg'),
+                    os.path.join(example_path, 'garment/italist/coat/upperbody_coat_3.jpeg'),
+                    os.path.join(example_path, 'garment/italist/coat/upperbody_coat_5.jpeg'),
+                    os.path.join(example_path, 'garment/italist/coat/upperbody_coat_8.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_6.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_7.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_8.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_9.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_10.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_11.jpeg'),
+                    os.path.join(example_path, 'garment/italist/topware/upperbody_topware_12.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/upperbody_tracksuit_2.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/upperbody_tracksuit_3.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/upperbody_tracksuit_4.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/upperbody_tracksuit_5.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/upperbody_tracksuit_6.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/upperbody_tracksuit_7.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/upperbody_tracksuit_8.jpeg'),
                 ])
             example = gr.Examples(
                 label="Examples (lower-body)",
@@ -230,6 +253,31 @@ with block:
                     os.path.join(example_path, 'garment/051517_1.jpg'),
                     os.path.join(example_path, 'garment/051988_1.jpg'),
                     os.path.join(example_path, 'garment/051412_1.jpg'),
+                    os.path.join(example_path, 'garment/italist/jeans/lowerbody_jeans_1.jpeg'),
+                    os.path.join(example_path, 'garment/italist/jeans/lowerbody_jeans_2.jpeg'),
+                    os.path.join(example_path, 'garment/italist/jeans/lowerbody_jeans_3.jpeg'),
+                    os.path.join(example_path, 'garment/italist/jeans/lowerbody_jeans_4.jpeg'),
+                    os.path.join(example_path, 'garment/italist/jeans/lowerbody_jeans_5.jpeg'),
+                    os.path.join(example_path, 'garment/italist/jeans/lowerbody_jeans_6.jpeg'),
+                    os.path.join(example_path, 'garment/italist/jeans/lowerbody_jeans_7.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_1.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_2.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_3.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_4.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_5.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_6.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_7.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_8.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_9.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_10.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_11.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_12.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_13.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_14.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_15.jpeg'),
+                    os.path.join(example_path, 'garment/italist/skirts/lowerbody_skirt_16.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/lowerbody_tracksuit_1.jpeg'),
+                    os.path.join(example_path, 'garment/italist/tracksuits/lowerbody_tracksuit_4.jpeg'),
                 ])
             example = gr.Examples(
                 label="Examples (dress)",
@@ -243,6 +291,23 @@ with block:
                     os.path.join(example_path, 'garment/053790_1.jpg'),
                     os.path.join(example_path, 'garment/053319_1.jpg'),
                     os.path.join(example_path, 'garment/052234_1.jpg'),
+                    os.path.join(example_path, 'garment/italist/coat/dress_coat_1.jpeg'),
+                    os.path.join(example_path, 'garment/italist/coat/dress_coat_4.jpeg'),
+                    os.path.join(example_path, 'garment/italist/coat/dress_coat_6.jpeg'),
+                    os.path.join(example_path, 'garment/italist/coat/dress_coat_1.jpeg'),
+                    os.path.join(example_path, 'garment/italist/coat/dress_coat_7.jpeg'),
+
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_1.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_2.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_4.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_5.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_6.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_7.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_8.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_9.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_10.jpeg'),
+                    os.path.join(example_path, 'garment/italist/dress/dress_dress_11.jpeg'),
+
                 ])
         with gr.Column():
             result_gallery_dc = gr.Gallery(label='Output', show_label=False, elem_id="gallery", preview=True, scale=1)   
